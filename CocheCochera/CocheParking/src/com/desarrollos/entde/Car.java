@@ -1,5 +1,5 @@
 package com.desarrollos.entde;
-//eliminado los import
+//eliminado los import de java
 /**
  * Class that models objects of type "car"
  * 

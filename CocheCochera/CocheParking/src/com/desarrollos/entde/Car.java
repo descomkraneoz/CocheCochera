@@ -1,7 +1,5 @@
 package com.desarrollos.entde;
-//version con errores
-import java.util.Arrays;
-import java.awt.Color;
+//eliminado los import
 /**
  * Class that models objects of type "car"
  * 
@@ -29,21 +27,27 @@ public class Car
     public static void main(String[] args) throws InterruptedException{
     	Garage g = new Garage();
     	Car car = new Car(g);
-        car.accelerate();
+        Car.accelerate();
         slowDown();
         moveDown();
         accelerate();
-        car.printGarage();
+        g.printGarage();//corregido 'car' por 'g' 
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
     }    
 
-    /**
+   /* private void printGarage() 
+    {
+        System.out.print("|*]"); //corregido System
+    }*/
+
+
+	/**
      * Accelerate the car
      * @throws InterruptedException 
      */
-    public void accelerate() throws InterruptedException{
+    public static void accelerate() throws InterruptedException{ //puesto static
         String c = new String("*");
         String space = new String(" ");
     	for(int i=0; i<5; i++)
@@ -58,8 +62,8 @@ public class Car
      * Slow down the car
      * @throws InterruptedException 
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    public static void slowDown() throws InterruptedException{ //puesto static
+    	String c = new String("     *"); //corregido string por String
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -73,9 +77,9 @@ public class Car
      * Move the car downwards
      * @throws InterruptedException 
      */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    public static void moveDown() throws InterruptedException{ //puesto static
+    	String c = new String("\t\t\t\t  *"); //string por String y eliminado un ')'
+    	for(int i=0; i<5; i++) //corregido las ',' por ';'
         {
     		if(i!=4)
     			System.out.println(c);
